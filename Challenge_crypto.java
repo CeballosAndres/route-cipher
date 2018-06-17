@@ -79,13 +79,13 @@ public class Challenge_crypto {
         }
     }
     
-    public char[][] toMatrix(String string, int columnas, int renglones){
+    public char[][] toMatrix(String string, int columns, int rows){
         int index = 0;
-        char[][] matrix = new char[renglones][columnas];
+        char[][] matrix = new char[rows][columns];
         char[] charArray = string.replaceAll("\\s","").replaceAll("[^a-zA-Z0-9]+","").toUpperCase().toCharArray();
 
-        for (int i = 0; i < renglones; i++) {
-            for (int j = 0; j < columnas; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 if (index < charArray.length) {
                     matrix[i][j] = charArray[index];
                 } else {
